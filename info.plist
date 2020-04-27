@@ -58,21 +58,21 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>uuid</string>
+				<key>subtext</key>
+				<string></string>
 				<key>text</key>
-				<string>Uuid copied to clipboard</string>
-				<key>title</key>
-				<string>Uuid</string>
+				<string>Generate a uuid</string>
+				<key>withspace</key>
+				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>B1B8760E-6CC9-48CF-A788-29DB75B44CF5</string>
+			<string>1918926D-EB49-4837-85A0-E9D70FF3D427</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -110,21 +110,21 @@ echo $uuid-&gt;getUuid();
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>uuid</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Generate a uuid</string>
-				<key>withspace</key>
+				<key>lastpathcomponent</key>
 				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Uuid copied to clipboard</string>
+				<key>title</key>
+				<string>Uuid</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>1918926D-EB49-4837-85A0-E9D70FF3D427</string>
+			<string>B1B8760E-6CC9-48CF-A788-29DB75B44CF5</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -147,7 +147,7 @@ echo $uuid-&gt;getUuid();
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>This generates a universally unique identifier v4 (uuid) and copies it to the clipboard, it also notifies you via notification that it's been copied to the clipboard.</string>
 	<key>uidata</key>
 	<dict>
 		<key>1918926D-EB49-4837-85A0-E9D70FF3D427</key>
@@ -179,6 +179,10 @@ echo $uuid-&gt;getUuid();
 			<integer>160</integer>
 		</dict>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0.0</string>
 	<key>webaddress</key>
 	<string>https://centralblue.co.uk</string>
 </dict>
