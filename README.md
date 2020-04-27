@@ -1,4 +1,4 @@
-# Generating an uuid  on [Alfred 3](https://www.alfredapp.com).
+# Generating an uuid  on [Alfred](https://www.alfredapp.com).
 
 ![Screenshot](screenshot.png)
 
