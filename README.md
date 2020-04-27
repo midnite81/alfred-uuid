@@ -1,4 +1,4 @@
-# Generating an uuid  on [Alfred](https://www.alfredapp.com).
+# Generating an Universally Unique Identifier v4 (UUID) on [Alfred](https://www.alfredapp.com).
 
 ![Screenshot](screenshot.png)
 
