@@ -20,6 +20,39 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>51CD58AB-79F3-45E6-A8B4-D93AC4523957</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Copy uuid directly into formost application</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>BBA16B11-92BC-4073-B549-36CF2F8B1629</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>Copy uuid directly into formost application</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>51CD58AB-79F3-45E6-A8B4-D93AC4523957</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E884CC95-904A-4609-8D2C-4BFBD34465F5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>9B2090D2-4760-453C-93D2-E3FEAF84980F</key>
 		<array>
@@ -44,6 +77,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>BBA16B11-92BC-4073-B549-36CF2F8B1629</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9B5F77DB-7C53-4855-ABAA-A4CFAB74D278</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Simon Rogers</string>
@@ -55,6 +101,27 @@
 	<string>Generate Uuid</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Uuid copied to clipboard</string>
+				<key>title</key>
+				<string>Uuid</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>B1B8760E-6CC9-48CF-A788-29DB75B44CF5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -110,27 +177,6 @@ echo $uuid-&gt;getUuid();
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>Uuid copied to clipboard</string>
-				<key>title</key>
-				<string>Uuid</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>B1B8760E-6CC9-48CF-A788-29DB75B44CF5</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
@@ -145,15 +191,117 @@ echo $uuid-&gt;getUuid();
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>100</integer>
+				<key>script</key>
+				<string>&lt;?php
+
+include "Uuid.php";
+
+$uuid = new Uuid(); 
+
+echo $uuid-&gt;getUuid();
+
+?&gt;</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>51CD58AB-79F3-45E6-A8B4-D93AC4523957</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>E884CC95-904A-4609-8D2C-4BFBD34465F5</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>9B5F77DB-7C53-4855-ABAA-A4CFAB74D278</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>100</integer>
+				<key>script</key>
+				<string>&lt;?php
+
+include "Uuid.php";
+
+$uuid = new Uuid(); 
+
+echo $uuid-&gt;getUuid();
+
+?&gt;</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>BBA16B11-92BC-4073-B549-36CF2F8B1629</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
-	<string>This generates a universally unique identifier v4 (uuid) and copies it to the clipboard, it also notifies you via notification that it's been copied to the clipboard.</string>
+	<string>This generates a universally unique identifier v4 (uuid) and copies it to the clipboard, it also notifies you via notification that it's been copied to the clipboard.
+
+*Usage*
+
+uuid (enter) - will place the the generated uuid onto the clipboard
+
+uuid (shift+enter or command+enter) - will copy the generated uuid directly to the foremost application</string>
 	<key>uidata</key>
 	<dict>
 		<key>1918926D-EB49-4837-85A0-E9D70FF3D427</key>
 		<dict>
 			<key>xpos</key>
-			<integer>240</integer>
+			<integer>70</integer>
 			<key>ypos</key>
 			<integer>160</integer>
 		</dict>
@@ -164,12 +312,26 @@ echo $uuid-&gt;getUuid();
 			<key>ypos</key>
 			<integer>275</integer>
 		</dict>
+		<key>51CD58AB-79F3-45E6-A8B4-D93AC4523957</key>
+		<dict>
+			<key>xpos</key>
+			<integer>370</integer>
+			<key>ypos</key>
+			<integer>400</integer>
+		</dict>
 		<key>9B2090D2-4760-453C-93D2-E3FEAF84980F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>390</integer>
+			<integer>370</integer>
 			<key>ypos</key>
 			<integer>160</integer>
+		</dict>
+		<key>9B5F77DB-7C53-4855-ABAA-A4CFAB74D278</key>
+		<dict>
+			<key>xpos</key>
+			<integer>555</integer>
+			<key>ypos</key>
+			<integer>530</integer>
 		</dict>
 		<key>B1B8760E-6CC9-48CF-A788-29DB75B44CF5</key>
 		<dict>
@@ -178,11 +340,25 @@ echo $uuid-&gt;getUuid();
 			<key>ypos</key>
 			<integer>160</integer>
 		</dict>
+		<key>BBA16B11-92BC-4073-B549-36CF2F8B1629</key>
+		<dict>
+			<key>xpos</key>
+			<integer>375</integer>
+			<key>ypos</key>
+			<integer>530</integer>
+		</dict>
+		<key>E884CC95-904A-4609-8D2C-4BFBD34465F5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>550</integer>
+			<key>ypos</key>
+			<integer>400</integer>
+		</dict>
 	</dict>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0.0</string>
+	<string>1.1.0</string>
 	<key>webaddress</key>
 	<string>https://centralblue.co.uk</string>
 </dict>
